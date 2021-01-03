@@ -250,7 +250,12 @@ public class Graph{
 		}
 		return new Edge(-1,-1);
 	}
-    
+
+	public void afficheCouleursSommet(){
+   		for(int i = 0 ; i < verticesColors.length;i++ ){
+			System.out.println("SOMMET " + i + " : " + verticesColors[i]);
+		}
+	}
     public void writeFile(String s)
     {
 	try
