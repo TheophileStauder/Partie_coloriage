@@ -233,7 +233,7 @@ public class Graph{
    		for(int i = 0 ; i < vertices();i++){
    			String color = verticesColors[i];
    			for(Edge e : adj(i)){
-   				int voisin = e.other(i);
+				int voisin = e.other(i);
    				if(verticesColors[voisin].equals(color)){return false;}
 			}
 		}
