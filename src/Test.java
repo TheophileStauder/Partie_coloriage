@@ -97,7 +97,8 @@ public class Test {
 	public static void main(String[] args) {
 
 		Graph graph = new Graph("g5.txt");
-
+		Coloriage coloriage = new Coloriage(graph);
+		coloriage.colore();
 
 
 		/*int size = 4;

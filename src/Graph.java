@@ -16,6 +16,7 @@ public class Graph{
    private int V;
    private int E;
    static ArrayList<String> COLORS = new ArrayList<>();
+   private String[] verticesColors;
 
    public Graph(int N)
          {
@@ -23,6 +24,7 @@ public class Graph{
 		 COLORS.addAll(colorsList);
 	     this.V = N;
 	     this.E = 0;
+	     verticesColors = new String[N];
 	     adj = (ArrayList<Edge>[]) new ArrayList[N];
 	     for (int v= 0; v < N; v++)
 		 adj[v] = new ArrayList<Edge>();
@@ -60,6 +62,7 @@ public class Graph{
 			String data = myReader.nextLine();
 			if(ligne==-1){
 				this.V = Integer.parseInt(data);
+				verticesColors = new String[V];
 				this.E = 0;
 				adj = (ArrayList<Edge>[]) new ArrayList[V];
 				int [] verticesColor = new int[V];
@@ -72,10 +75,9 @@ public class Graph{
 				for (int i = 0; i < data.length(); i++){
 					char c = data.charAt(i);
 					int bit = Character.getNumericValue(c);
-					System.out.println(bit);
+					//System.out.println(bit); //DEBUG
 					if(bit == 1){
 						if(getSpecificEdge(ligne,i).equals(new Edge(-1,-1))) {
-							System.out.println("je cree un arete entre : " + ligne + " et " + i );
 							addEdge(new Edge(ligne, i));
 						}
 					}
@@ -91,10 +93,10 @@ public class Graph{
 
 
 
-		System.out.println("Nombre de sommet : " + vertices());
+		/*System.out.println("Nombre de sommet : " + vertices());
 		for (Edge e : edges()){
-			System.out.println(e.toString());
-		}
+			System.out.println(e.toString());  //DEBUG
+		}*/
 		int x,y;
 		x = y = 100;
 		for(int i = 0 ; i < vertices();i++){
@@ -123,7 +125,7 @@ public class Graph{
                 adj[v].add(e);
                 adj[w].add(e);
          }
-   
+
    public ArrayList<Edge> adj(int v)
          {
 	     return new ArrayList<Edge>(adj[v]);
@@ -149,6 +151,9 @@ public class Graph{
    		return new Edge(-1,-1);
 	}
 
+	public int getDegree(int v){
+   		return adj[v].size();
+	}
     static Graph example(){
 	Graph g = new Graph(4);
 	g.setCoordinate(0, 100,100);
