@@ -239,6 +239,17 @@ public class Graph{
 		}
    		return true;
 	}
+
+	public Edge getConflictEdge(){
+		for(int i = 0 ; i < vertices();i++){
+			String color = verticesColors[i];
+			for(Edge e : adj(i)){
+				int voisin = e.other(i);
+				if(verticesColors[voisin].equals(color)){return e;}
+			}
+		}
+		return new Edge(-1,-1);
+	}
     
     public void writeFile(String s)
     {

@@ -114,6 +114,8 @@ public class Test {
 		}
 		else{
 			System.out.println("Graph 10 not 3-colorable !");
+			Edge e = res10.getConflictEdge();
+			System.out.println("CONFLIT entre " + e.getFrom() + " et "+ e.getTo());
 		}
 
 		Graph graph30a = new Graph("g30a.txt");
@@ -145,6 +147,8 @@ public class Test {
 		}
 		else{
 			System.out.println("Graph 50 not 3-colorable !" );
+			Edge e = res50.getConflictEdge();
+			System.out.println("CONFLIT entre " + e.getFrom() + " et "+ e.getTo());
 		}
 
 		Graph graph55 = new Graph("g55.txt");
@@ -155,6 +159,8 @@ public class Test {
 		}
 		else{
 			System.out.println("Graph 55 not 3-colorable !");
+			Edge e = res55.getConflictEdge();
+			System.out.println("CONFLIT entre " + e.getFrom() + " et "+ e.getTo());
 		}
 
 
@@ -166,6 +172,8 @@ public class Test {
 		}
 		else{
 			System.out.println("Graph 60 not 3-colorable !");
+			Edge e = res60.getConflictEdge();
+			System.out.println("CONFLIT entre " + e.getFrom() + " et "+ e.getTo());
 		}
 
 		Graph graph65 = new Graph("g65.txt");
@@ -207,6 +215,8 @@ public class Test {
 		}
 		else{
 			System.out.println("Graph 80 not 3-colorable !");
+			Edge e = res80.getConflictEdge();
+			System.out.println("CONFLIT entre " + e.getFrom() + " et "+ e.getTo());
 		}
 
 		Graph graph85 = new Graph("g85.txt");
