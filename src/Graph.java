@@ -6,7 +6,6 @@ import java.awt.*;
 import java.awt.image.*;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Graph{
@@ -66,6 +65,7 @@ public class Graph{
 				this.E = 0;
 				adj = (ArrayList<Edge>[]) new ArrayList[V];
 				int [] verticesColor = new int[V];
+				initialiseVerticesColors();
 				for (int v= 0; v < V; v++) {
 					adj[v] = new ArrayList<Edge>();
 					coordX = new int[V];
@@ -154,6 +154,15 @@ public class Graph{
 	public int getDegree(int v){
    		return adj[v].size();
 	}
+
+	public void setColor(int u ,String c){
+   		verticesColors[u] = c;
+	}
+
+	public String[] getColors(){
+   		return verticesColors;
+	}
+
     static Graph example(){
 	Graph g = new Graph(4);
 	g.setCoordinate(0, 100,100);
@@ -220,6 +229,16 @@ public class Graph{
 	return image;
     }
 
+    public boolean is3Color(){
+   		for(int i = 0 ; i < vertices();i++){
+   			String color = verticesColors[i];
+   			for(Edge e : adj(i)){
+   				int voisin = e.other(i);
+   				if(verticesColors[voisin].equals(color)){return false;}
+			}
+		}
+   		return true;
+	}
     
     public void writeFile(String s)
     {
@@ -247,6 +266,12 @@ public class Graph{
 				Arrays.equals(adj, graph.adj) &&
 				Arrays.equals(coordX, graph.coordX) &&
 				Arrays.equals(coordY, graph.coordY);
+	}
+
+	public void initialiseVerticesColors() {
+		for (int i = 0; i < getColors().length; i++) {
+			getColors()[i] = "none";
+		}
 	}
 
 }

@@ -98,7 +98,34 @@ public class Test {
 
 		Graph graph = new Graph("g5.txt");
 		Coloriage coloriage = new Coloriage(graph);
-		coloriage.colore();
+		Graph res = coloriage.colore();
+
+		Graph graph10 = new Graph("g10.txt");
+		coloriage = new Coloriage(graph);
+		Graph res10 = coloriage.colore();
+
+		Graph graph50 = new Graph("g50.txt");
+		coloriage = new Coloriage(graph);
+		Graph res50 = coloriage.colore();
+
+		Graph graph60 = new Graph("g60.txt");
+		coloriage = new Coloriage(graph);
+		Graph res60 = coloriage.colore();
+
+		Graph graph80 = new Graph("g80.txt");
+		coloriage = new Coloriage(graph);
+		Graph res80 = coloriage.colore();
+		if(res80.is3Color()) {
+			System.out.println("3 colored");
+		}
+		else{
+			System.out.println("victoryr");
+		}
+
+		/*for(int i = 0 ; i < res.getColors().length;i++){
+			System.out.println("COULEUR SOMMET : " + i  + " " + res.getColors()[i]);
+		}*/
+
 
 
 		/*int size = 4;
