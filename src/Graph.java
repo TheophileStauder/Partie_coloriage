@@ -291,4 +291,10 @@ public class Graph{
 		}
 	}
 
+	public void afficheCube(){
+   		for(Edge e : edges()){
+			System.out.println(e.toString());
+		}
+	}
+
 }
