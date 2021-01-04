@@ -168,7 +168,7 @@ public class Test {
 		coloriage = new Coloriage(graph60);
 		Graph res60 = coloriage.colore();
 		if(res60.is3Color()) {
-			System.out.println("Graph 60 is  3-colorable");
+			System.out.println("Graph 60 is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 60 not 3-colorable !");
@@ -180,7 +180,7 @@ public class Test {
 		coloriage = new Coloriage(graph65);
 		Graph res65 = coloriage.colore();
 		if(res65.is3Color()) {
-			System.out.println("Graph 65 is  3-colorable");
+			System.out.println("Graph 65 is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 65 not 3-colorable !");
@@ -190,7 +190,7 @@ public class Test {
 		coloriage = new Coloriage(graph70);
 		Graph res70 = coloriage.colore();
 		if(res70.is3Color()) {
-			System.out.println("Graph 70 is  3-colorable");
+			System.out.println("Graph 70 is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 70 not 3-colorable !");
@@ -200,7 +200,7 @@ public class Test {
 		coloriage = new Coloriage(graph75);
 		Graph res75 = coloriage.colore();
 		if(res70.is3Color()) {
-			System.out.println("Graph 75 is  3-colorable");
+			System.out.println("Graph 75 is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 75 not 3-colorable !");
@@ -211,7 +211,7 @@ public class Test {
 		coloriage = new Coloriage(graph80);
 		Graph res80 = coloriage.colore();
 		if(res80.is3Color()) {
-			System.out.println("Graph 80 is  3-colorable");
+			System.out.println("Graph 80 is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 80 not 3-colorable !");
@@ -223,7 +223,7 @@ public class Test {
 		coloriage = new Coloriage(graph85);
 		Graph res85 = coloriage.colore();
 		if(res85.is3Color()) {
-			System.out.println("Graph 85 is  3-colorable");
+			System.out.println("Graph 85 is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 85 not 3-colorable !");
@@ -234,7 +234,7 @@ public class Test {
 		coloriage = new Coloriage(graph90);
 		Graph res90 = coloriage.colore();
 		if(res90.is3Color()) {
-			System.out.println("Graph 90 is  3-colorable");
+			System.out.println("Graph 90 is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 90 not 3-colorable !");
@@ -244,7 +244,7 @@ public class Test {
 		coloriage = new Coloriage(graph100);
 		Graph res100 = coloriage.colore();
 		if(res90.is3Color()) {
-			System.out.println("Graph 100 is  3-colorable");
+			System.out.println("Graph 100 is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 100 not 3-colorable !");
@@ -254,7 +254,7 @@ public class Test {
 		coloriage = new Coloriage(graph200a);
 		Graph res200a = coloriage.colore();
 		if(res200a.is3Color()) {
-			System.out.println("Graph 200a is  3-colorable");
+			System.out.println("Graph 200a is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 200a not 3-colorable !");
@@ -264,7 +264,7 @@ public class Test {
 		coloriage = new Coloriage(graph200b);
 		Graph res200b = coloriage.colore();
 		if(res200a.is3Color()) {
-			System.out.println("Graph 200b is  3-colorable");
+			System.out.println("Graph 200b is 3-colorable");
 		}
 		else{
 			System.out.println("Graph 200b not 3-colorable !");
@@ -272,6 +272,96 @@ public class Test {
 		/*for(int i = 0 ; i < res.getColors().length;i++){
 			System.out.println("COULEUR SOMMET : " + i  + " " + res.getColors()[i]);
 		}*/
+
+
+		NCubes ncubes = new NCubes(1);
+		Graph oneCube = ncubes.getnCubes();
+		coloriage = new Coloriage(oneCube);
+		Graph resOne = coloriage.colore();
+		if(resOne.is3Color()) {
+			System.out.println("Graph 1-Cube is 3-colorable");
+		}
+		else{
+			System.out.println("Graph 1-Cube not 3-colorable !");
+		}
+
+		ncubes = new NCubes(2);
+		Graph twoCube = ncubes.getnCubes();
+		coloriage = new Coloriage(twoCube);
+		Graph resTwo = coloriage.colore();
+		if(resTwo.is3Color()) {
+			System.out.println("Graph 2-Cube is 3-colorable");
+		}
+		else{
+			System.out.println("Graph 2-Cube not 3-colorable !");
+		}
+
+		ncubes = new NCubes(3);
+		Graph threeCube = ncubes.getnCubes();
+		coloriage = new Coloriage(threeCube);
+		Graph resThree = coloriage.colore();
+		if(resThree.is3Color()) {
+			System.out.println("Graph 3-Cube is 3-colorable");
+		}
+		else{
+			System.out.println("Graph 3-Cube not 3-colorable !");
+		}
+
+		ncubes = new NCubes(4);
+		Graph fourCube = ncubes.getnCubes();
+		coloriage = new Coloriage(fourCube);
+		Graph resFour = coloriage.colore();
+		if(resFour.is3Color()) {
+			System.out.println("Graph 4-Cube is 3-colorable");
+		}
+		else{
+			System.out.println("Graph 4-Cube not 3-colorable !");
+		}
+
+		ncubes = new NCubes(5);
+		Graph fiveCube = ncubes.getnCubes();
+		coloriage = new Coloriage(fiveCube);
+		Graph resFive = coloriage.colore();
+		if(resFive.is3Color()) {
+			System.out.println("Graph 5-Cube is 3-colorable");
+		}
+		else{
+			System.out.println("Graph 5-Cube not 3-colorable !");
+		}
+
+
+		ncubes = new NCubes(6);
+		Graph sixCube = ncubes.getnCubes();
+		coloriage = new Coloriage(sixCube);
+		Graph resSix = coloriage.colore();
+		if(resSix.is3Color()) {
+			System.out.println("Graph 6-Cube is 3-colorable");
+		}
+		else{
+			System.out.println("Graph 6-Cube not 3-colorable !");
+		}
+
+		ncubes = new NCubes(7);
+		Graph sevenCube = ncubes.getnCubes();
+		coloriage = new Coloriage(sevenCube);
+		Graph resSeven = coloriage.colore();
+		if(resSeven.is3Color()) {
+			System.out.println("Graph 7-Cube is 3-colorable");
+		}
+		else{
+			System.out.println("Graph 7-Cube not 3-colorable !");
+		}
+
+		ncubes = new NCubes(8);
+		Graph eightCube = ncubes.getnCubes();
+		coloriage = new Coloriage(eightCube);
+		Graph resEight = coloriage.colore();
+		if(resEight.is3Color()) {
+			System.out.println("Graph 8-Cube is 3-colorable");
+		}
+		else{
+			System.out.println("Graph 8-Cube not 3-colorable !");
+		}
 
 
 

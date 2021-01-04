@@ -24,6 +24,7 @@ public class Graph{
 	     this.V = N;
 	     this.E = 0;
 	     verticesColors = new String[N];
+	     initialiseVerticesColors();
 	     adj = (ArrayList<Edge>[]) new ArrayList[N];
 	     for (int v= 0; v < N; v++)
 		 adj[v] = new ArrayList<Edge>();
